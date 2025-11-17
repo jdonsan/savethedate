@@ -2,13 +2,13 @@ const path = require('path')
 const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
-  publicPath: '/pilaryborja120926/',
+  publicPath: '/savethedate/',
   transpileDependencies: true,
   devServer: {
     open: true
   },
   pwa: {
-    name: 'Pilar&Borja 12.09.2026',
+    name: 'STD - Pilar&Borja 12.09.2026',
     themeColor: '#B2A6D1',
     msTileColor: '#ffffff'
   },
