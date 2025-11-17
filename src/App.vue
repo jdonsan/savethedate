@@ -8,6 +8,7 @@
 
 <script>
 import MyCover from './components/MyCover/MyCover'
+
 export default {
   name: 'App',
 

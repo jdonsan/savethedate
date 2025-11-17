@@ -25,7 +25,7 @@
           <h4>Finca Montealvar, Valdeluz</h4>
 
           <a
-            href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Nm9vM2dkcjNjY3MzNGI5aWNoaDM2YjlrY2RnajJiOW83MWkzNGI5ZzZsaWphYzlqY2hoM2FkYjM2cyBmYW1pbHkxNjAxODczMzIwODc1ODUxNjQ5M0Bn&tmsrc=family16018733208758516493%40group.calendar.google.com"
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20260912%2F20260912&text=Boda%20de%20Pilar%20y%20Borja"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -61,6 +61,17 @@ export default {
     background-size: cover;
     background-attachment: fixed;
     position: fixed;
+
+    animation: show 3s ease-in-out forwards;
+
+    @keyframes show {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   }
 
   &-content {
@@ -68,6 +79,16 @@ export default {
     bottom: 0;
     width: 100%;
     max-width: 768px;
+    animation: slide 2s ease-in-out forwards;
+
+    @keyframes slide {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
     &-container {
       padding-bottom: 32px;
