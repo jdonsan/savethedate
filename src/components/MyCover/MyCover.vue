@@ -2,6 +2,7 @@
   <section class="my-cover">
     <div class="my-cover-container">
       <div class="my-cover-picture"></div>
+      <div class="my-cover-picture-bg"></div>
       <div class="my-cover-content">
         <img src="@/assets/img/curva-1.png" alt="curva" />
         <div class="my-cover-content-container">
@@ -51,17 +52,26 @@ export default {
     margin: 0 auto;
   }
 
+  &-picture-bg {
+    position: fixed;
+    background-color: $color-2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.3;
+  }
+
   &-picture {
     width: 100%;
     max-width: 768px;
     height: 100vh;
-    background-image: url('@/assets/img/bg.webp');
+    background-image: url('@/assets/img/bg.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: fixed;
-
     animation: show 3s ease-in-out forwards;
 
     @keyframes show {
@@ -82,13 +92,13 @@ export default {
     animation: slide 2s ease-in-out forwards;
 
     @keyframes slide {
-    0% {
-      transform: translateY(100%);
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
-    100% {
-      transform: translateY(0);
-    }
-  }
 
     &-container {
       padding-bottom: 32px;
