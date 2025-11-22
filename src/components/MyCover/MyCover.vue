@@ -59,7 +59,7 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0.3;
+    opacity: 0;
   }
 
   &-picture {
@@ -67,15 +67,18 @@ export default {
     max-width: 768px;
     height: 100vh;
     background-image: url('@/assets/img/bg.jpg');
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
     background-attachment: fixed;
     position: fixed;
     animation: show 3s ease-in-out forwards;
 
     @keyframes show {
       0% {
+        opacity: 0;
+      } 
+      50% {
         opacity: 0;
       }
       100% {
